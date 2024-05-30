@@ -4,87 +4,131 @@ html {
   box-sizing: border-box;
 }
 
+/*fonts from google fonts*/
+.montserrat-favoritten {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*END fonts from google fonts*/
+
+/*general*/
 body {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-family: montserrat;
   font-size: 100%;
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(238, 238, 238);
   margin: 0;
 }
 
-/* link styles */
-a:link,
-a:visited {
-  color: #6d3b6a;
+main {
+  line-height: 1.5em;
+  color: #05155c;
+  padding: 2em;
+  margin: 2.5%;
 }
 
-a:focus,
-a:hover,
-a:active {
-  color: #f933d1;
-}
-
-a {
-  text-decoration: none;
-  border-bottom: 1px dotted;
-  padding-bottom: .2em;
-}
-
-
-/* header styles */
-header {
-  color: #780000;
-  background: url(images/forsida_merga@3x.png) no-repeat center center;
-  background-size: cover;
+h2 {
+  font-family: montserrat;
+  font-weight: 300;
+  text-transform: uppercase;
   text-align: center;
-  height: 18em;
+  letter-spacing: .2em;
+}
+
+h3 {
+  font-family: libre;
+  letter-spacing: .2em;
+  border-left: 2px solid;
+  padding-left: 1em;
+  padding-top: 1em;
+  margin-top: 2em;
+}
+/*END general*/
+
+/*HOME page*/
+header {
+  background: url(images/Sete.130.png) no-repeat center center;
+  background-size: cover;
+  height: 30em;
+  text-align: center;
 }
 
 header p {
-  font-style: italic;
-  font-size: 1.2em;
+  font-size: 1em;
   margin-top: -12px;
 }
 
 header h1 {
-  margin-top: 1.5em;
-  grid-row: 1;
-  grid-column: 1/-1;
+  text-transform: uppercase;
+  margin-top: 150px;
+}
+/*END HOME page*/
+
+/*ABOUT page*/
+
+intro {
+  font-size: smaller;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
+header2 {
+  color: #05155c;
+  background: url(images/cb5_v2.jpg) no-repeat center center;
+  background-size: 250%;
+  height: 30em;
+  text-align: center;
+}
 
-/* nav styles */
-nav {
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 1;
-  grid-column-end: -1; 
-  }
+header2 p {
+  font-size: 1em;
+  margin-top: -12px;
+}
+
+header2 h1 {
+  text-transform: uppercase;
+  margin-top: 150px;
+}
+/*END ABOUT page*/
+
+
+/*design of navbar and footer*/
+a {
+  text-decoration: dotted;
+  padding-bottom: .2em;
+}
 
 nav,
 footer {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #ffffff;
+  background-color: #fcfcfc;
 }
 
+/*this code is for the space between the elements in the navbar*/
 nav ul li a {
   display: block;
-  border: 1px solid;
-  border-radius: .5em;
   padding: .5em 1em;
   margin: .5em;
-  }
-
-nav ul li a:link,
-nav ul li a:visited {
-  color: #440e0e;
 }
 
-nav ul li a:focus,
-nav ul li a:hover,
-nav ul li a:active {
-  color: #fff;
+/*change of color when hovering, and border is added*/
+nav ul li a:hover {
+  color: #05155c;
+  font-weight: bolder;
+  border-bottom: 2px outset;
 }
 
+/*code here removes the list format, all elements on one line*/
 nav ul {
   margin: 0;
   padding: 0;
@@ -93,69 +137,67 @@ nav ul {
   justify-content: center;
 }
 
+/*change text transform, size, space between letters*/
 nav ul li {
   font-size: .8em;
   text-transform: uppercase;
   letter-spacing: .2em;
 }
 
-/* main "products" styles */
-main {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: white;
-  line-height: 1.8em;
-  color: #000000;
-  padding: 1em;
-  border: 4px #200620;
-  border-radius: 25px;
-  margin: 2.5%;
-}
-
-h3 {
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  color: #5c0505;
-  border-top: 1px solid;
-  border-left: 3px solid;
-  padding-left: 1em;
-  margin-top: 2.5em;
-}
-
-p.more {
-  font-family: verdana, sans-serif;
-  text-transform: uppercase;
-  font-size: .8em;
-  clear: left;
-}
-
-main img {
-  float: left;
-  margin: 0 1em 1em 0;
-}
-
-img[src*="Outline of chair back"] {
-    width: 80%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  img {width: 100%}
-  
-  div.container {
-    text-align: center;
-    padding: 10px 20px;
-  }
-
 footer {
-  color: #780000;
+  color: #05155c;
   text-align: center;
   font-size: .8em;
-  padding: 1em;
-
-  grid-row: -1 / -1;
-  grid-column: 1 /-1 ;
+  padding: 2em;
+  margin-top: auto;
 }
 
-h2 {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/*END design of navbar and footer*/
+
+
+/*Flexbox*/
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
+
+section {
+  background: #fcfcfc;
+  margin: 50px;
+  padding: 20px;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+}
+
+cv {
+  margin: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: libre;
+  letter-spacing: .2em;
+  color: #05155c;
+  border-left: 3px solid;
+  padding-left: 1em;
+  padding-top: 10px;
+  margin-top: 2em;
+}
+
+.photo {
+  order: -1;
+}
+
+/*END Flexbox*/
